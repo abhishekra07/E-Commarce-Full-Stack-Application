@@ -1,3 +1,33 @@
-<p *ngFor="let product of products">
-  {{ product.name }}
-</p>
+<div class="main-content">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3" *ngFor="let product of products">
+          <div class="card">
+            <img class="card-img-top" src="{{ product.imageUrl }}" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">{{ product.name }}</p>
+              <p>{{ product.unitPrice | currency:"USD" }}</p>
+              <a href="#" class="primary-btn"><i class="fas fa-shopping-cart pr-2"></i>&nbsp;&nbsp;&nbsp;Add to cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Another Template for cards -->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-sm-4 col-11 offset-sm-0 offset-1">
+    <div class="product-box">
+      <img src="{{ product.imageUrl }}" class="img-responsive">
+      <h1>{{ product.name }}</h1>
+      <h2>{{ product.description }}</h2>
+      <div class="price">{{ product.unitPrice | currency:"USD" }}</div>
+      <a href="#" class="primary-btn"><i class="fas fa-shopping-cart pr-2"></i>&nbsp;&nbsp;&nbsp;Add to cart</a>
+    </div>
+    </div>
+  </div>
+</div> -->
