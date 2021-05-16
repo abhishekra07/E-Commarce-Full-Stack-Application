@@ -2,6 +2,7 @@
   <div class="section-content section-content-p30">
     <div class="container-fluid">
       <div class="row">
+        <!-- Loop over all the products -->
         <div class="col-md-3 mb-2" *ngFor="let product of products">
           <div class="card">
             <img class="card-img-top" src="{{ product.imageUrl }}" alt="Card image cap">
@@ -12,6 +13,8 @@
             </div>
           </div>
         </div>
+
+        <!-- diplay message if no product found -->
       </div>
     </div>
   </div>
